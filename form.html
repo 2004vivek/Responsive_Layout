@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignupPage</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            background: linear-gradient(to bottom left,black,hsl(0, 0%, 41%));
+        }
+        .container{
+            width: 100vw;
+        
+        }
+        input{
+            background: transparent;
+            outline: 0; 
+        }
+      
+        .form{
+            display: flex;
+            justify-content: center;
+
+        }
+        .input_user{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          height: 100%;
+          width: 100%;
+         
+            gap: 10px;
+        }
+        .inner{
+        width: 550px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 35px;
+            transform: translate(-50%,-50%);
+           border: 7px solid white;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+       .inner:hover{
+        box-shadow:0px 0px 3px  3px white;
+        background:linear-gradient(to bottom left, black,#424040);
+       }
+       .user_details{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: fit-content;
+            position: relative;
+        }
+       .user_details label{
+             /* filter: invert(100); */
+             font-family: "Roboto", sans-serif;
+             font-weight: 600;
+             color:whitesmoke;
+             font-style: normal;
+             width: -webkit-fill-available;
+             align-self: center;
+        }
+        .user_details input[type="text"],input[type="password"],input[type="email"]{
+                        height: 2.3rem;
+                        border: none;
+                        border-bottom: 2px solid white;
+                      
+                        color:whitesmoke;
+                        font-size: 1rem;
+       }
+       .user_details_img img{
+        padding: 0;
+        border-radius: 7px;
+       }
+       .user_details_img{
+        position: absolute;
+        bottom: 0;
+        right:0;
+        width: 12%;
+       }
+       button{
+        height: 2.4rem;
+        border-radius: 8px;
+        width: 55%;
+        align-self: center;
+        font-family: "Roboto", sans-serif;
+          font-weight: 500;
+          font-style: bold;
+          font-size: 1.3rem;
+          background:linear-gradient(to bottom, black,#afadad);
+          color: white;
+        
+       }
+       form{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    gap: 1rem;
+       }
+       .signup{
+        margin-top: 12px;
+        margin-bottom: 12px;
+        width: fit-content;
+        padding: 5px 20px;
+       }
+       h1{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: 36px;
+        margin-bottom: 10px;
+       }
+       a{
+        text-decoration: none;
+        color: white;
+       }
+       @media screen and (max-width:380px){
+        .inner{
+            width: 290px;
+        }
+       }
+       @media screen and (min-width:330px) and (max-width:580px){
+        .inner{
+            width: 350px;
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inner">
+                <h1 style="text-align: center; color:whitesmoke ;">Login </h1>
+            <form action="" onsubmit="Submit(event)">
+                <div class="user_details">
+                    <label for="">Name:</label>
+                    <input type="text" name="name"  onchange="fun(event)">
+                </div
+                >
+                <div class="user_details">
+                    <label for="">Email:</label>
+                
+                    <input type="email" name="email"  onchange="Email(event)">
+                </div>
+                <div class="user_details">
+                    <label for="">Password:</label>
+                   
+                    <input type="password"  name="password" onchange="Password(event)">
+                </div>
+                <div class="user_details">
+                    <label for="">CPassword:</label>
+
+                    <input type="password" name="cpassword"  onchange="CPassword(event)">
+                </div>
+                <button class="signup"><a href="./index.html" onclick="alert()">Login</a></button>               
+            </form>
+            
+        </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+    <script>
+        function alert(){
+            confirm("Login Successfully")
+        }
+    </script>
+</body>
+</html>
